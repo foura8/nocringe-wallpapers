@@ -35,7 +35,7 @@
     <div class="max-w-7xl mx-auto flex justify-between items-stretch text-center h-16 text-lg font-bold tracking-wider">
       <a href="#new" class="flex-1 flex items-center justify-center border-r border-cyan-500/10 hover:bg-cyan-500/5 hover:text-cyan-400 transition heading-font uppercase">New</a>
       <a href="#all" class="flex-1 flex items-center justify-center border-r border-cyan-500/10 bg-cyan-500/5 text-cyan-400 border-b-2 border-b-cyan-400 neon-text-cyan transition heading-font uppercase">All</a>
-      <a href="#donate" id="donate-nav-btn" class="flex-1 flex items-center justify-center hover:bg-purple-500/10 text-purple-400 hover:text-purple-300 transition heading-font uppercase">Donate</a>
+      <a href="#donate" id="donate-nav-btn" class="flex-1 flex items-center justify-center border-cyan-500/10 hover:bg-cyan-500/5 hover:text-cyan-400 transition text-gray-400 heading-font uppercase">Support</a>
     </div>
   </header>
 
@@ -216,7 +216,7 @@
   </main>
 
   <footer class="border-t border-cyan-500/10 bg-[#04080d] py-4 text-center text-xs text-gray-500 tracking-widest uppercase">
-    &copy; 2026 NoCringeWallpapers Hub • Powered by GitHub Pages
+     Open Source Asset Hub • No Trackers • Ad-Free Always
   </footer>
 
   <div id="donation-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
@@ -225,7 +225,7 @@
       <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-purple-400 font-bold transition text-xl heading-font">&times;</button>
       
       <h3 class="text-xl font-bold text-purple-400 heading-font tracking-wide mb-2 uppercase">Support the Project</h3>
-      <p class="text-xs text-gray-400 mb-6 normal-case text-left">If you enjoy these wallpapers, dropping a tip keeps things running<<<3>>> Click copy to quickly grab an address.</p>
+      <p class="text-xs text-gray-400 mb-6 normal-case text-left">If you enjoy these wallpapers, dropping a tip keeps things running &hearts; Click copy to quickly grab an address.</p>
       
       <div class="space-y-4 text-left">
         
@@ -268,6 +268,11 @@
 
         tabs.forEach(t => {
           t.classList.remove('bg-cyan-500/5', 'text-cyan-400', 'border-b-2', 'border-b-cyan-400', 'neon-text-cyan');
+          // Reset support link style specifically
+          if(t.getAttribute('id') === 'donate-nav-btn') {
+            t.classList.add('text-gray-400');
+            t.classList.remove('text-cyan-400');
+          }
         });
         tab.classList.add('bg-cyan-500/5', 'text-cyan-400', 'border-b-2', 'border-b-cyan-400', 'neon-text-cyan');
 
